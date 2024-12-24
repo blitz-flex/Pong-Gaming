@@ -84,3 +84,9 @@ function update() {
         resetBall();
     }
 }
+
+// Update the score display
+function updateScore() {
+    const scoreDisplay = document.getElementById('score');
+    scoreDisplay.textContent = `Player: ${player.score} | Computer: ${computer.score}`;
+}
