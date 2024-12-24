@@ -54,3 +54,33 @@ function draw() {
     context.fill();
 }
 
+// Update game objects
+function update() {
+    ball.x += ball.velocityX;
+    ball.y += ball.velocityY;
+
+    // Ball collision with top and bottom walls
+    if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+        ball.velocityY = -ball.velocityY;
+    }
+
+    // Ball collision with paddles
+    if (ball.x - ball.radius < player.x + player.width && ball.y > player.y && ball.y < player.y + player.height) {
+        ball.velocityX = -ball.velocityX;
+    }
+
+    if (ball.x + ball.radius > computer.x && ball.y > computer.y && ball.y < computer.y + computer.height) {
+        ball.velocityX = -ball.velocityX;
+    }
+
+    // Reset ball if it goes out of bounds
+    if (ball.x - ball.radius < 0) {
+        computer.score++;
+        updateScore();
+        resetBall();
+    } else if (ball.x + ball.radius > canvas.width) {
+        player.score++;
+        updateScore();
+        resetBall();
+    }
+}
