@@ -90,3 +90,15 @@ function updateScore() {
     const scoreDisplay = document.getElementById('score');
     scoreDisplay.textContent = `Player: ${player.score} | Computer: ${computer.score}`;
 }
+
+// Reset ball to center
+function resetBall() {
+    ball.x = canvas.width / 2;
+    ball.y = canvas.height / 2;
+    ball.velocityX = -ball.velocityX; // Reverse direction
+}
+
+// Game loop
+function game() {
+    draw();
+}
