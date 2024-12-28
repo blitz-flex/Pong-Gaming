@@ -1,12 +1,40 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    background-color: #222;
+    background: #1a1a2e;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.score-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #0ff;
+    display: flex;
+    gap: 30px;
+}
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.score-label {
+    font-size: 0.8rem;
+    color: #0ff;
+}
+
+.score-value {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 canvas {
@@ -16,20 +44,7 @@ canvas {
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 2rem;
     color: #fff;
+    margin-bottom: 20px;
 }
-
-.score {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
- 
