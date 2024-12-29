@@ -10,6 +10,10 @@ body {
     font-family: 'Press Start 2P', Arial, sans-serif;
 }
 
+.game-container {
+    position: relative;
+}
+
 .score-container {
     background: rgba(0, 0, 0, 0.6);
     padding: 15px 30px;
@@ -34,17 +38,42 @@ body {
 
 .score-value {
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
 canvas {
     background: #000;
     border: 2px solid #fff;
-    display: block;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 h1 {
     font-size: 2rem;
-    color: #fff;
+    color: #0ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     margin-bottom: 20px;
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    background: #0ff;
+    border: none;
+    border-radius: 4px;
+    color: #1a1a2e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
