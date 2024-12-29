@@ -12,21 +12,23 @@
 </head>
 <body>
     <h1>Pong Game</h1>
-<div class="score-container">
-    <div class="score-item">
-        <span class="score-label">PLAYER</span>
-        <span class="score-value" id="playerScore">0</span>
+    <div class="score-container">
+        <div class="score-item">
+            <span class="score-label">PLAYER</span>
+            <span class="score-value" id="playerScore">0</span>
+        </div>
+        <div class="score-item">
+            <span class="score-label">Computer</span>
+            <span class="score-value" id="cpuScore">0</span>
+        </div>
     </div>
-    <div class="score-item">
-        <span class="score-label">Computer</span>
-        <span class="score-value" id="cpuScore">0</span>
+    <div class="game-container">
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
     </div>
-</div>
-<div class="game-container">
-    <canvas id="pongCanvas" width="800" height="400"></canvas>
-</div>
-<button class="start-button" id="startButton">START GAME</button>
-<div class="controls">Use ↑ and ↓ keys to move your paddle</div>
-    <script src="pong.js"></script>
+    <button class="start-button" id="startButton">START GAME</button>
+    <div class="controls">
+        Use ↑ and ↓ keys to move your paddle
+    </div>
+
 </body>
 </html>
