@@ -77,3 +77,19 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
+.pause-button {
+      margin-top: 5px;
+      padding: 10px 20px;
+      font-family: 'Press Start 2P', Arial, sans-serif;
+      background: #0ff;
+      border: none;
+      border-radius: 8px;
+      color: #1a1a2e;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.pause-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
